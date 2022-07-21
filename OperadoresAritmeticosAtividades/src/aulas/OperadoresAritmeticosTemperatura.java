@@ -9,18 +9,19 @@ public class OperadoresAritmeticosTemperatura {
 
 		Scanner leia = new Scanner(System.in).useLocale(Locale.US);
 		
-		double grausfah = 0.00;
-		double celsius = 0.00;
+		double grausfah = 0;
+		double celsius = 0;
 		
-		System.out.println("Insira a temperatura em graus Fahrenheit: ");
-		grausfah = leia.nextDouble ();
-		
-		celsius = 5.0 * (grausfah-32.0) / 9.0 ;
-		
-		System.out.println("A temperatura de graus Celsius é de: " + celsius);
-
+		System.out.print("Entre com a temperatura em graus Fahrenheit: ");
+		grausfah = leia.nextDouble();
 		
 		
+		celsius = 5 * ((grausfah -32) / 9);
+		
+		System.out.println("O valor convertido para celsius fica: " + celsius);
+		
+		
+				
 		leia.close();
 	}
 

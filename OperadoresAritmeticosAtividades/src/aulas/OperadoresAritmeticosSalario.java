@@ -9,14 +9,25 @@ public class OperadoresAritmeticosSalario {
 
 		Scanner leia = new Scanner(System.in).useLocale(Locale.US);
 		
-		double salárioHora = 16.00;
-		double horasTrabalhadas = 160.00;
+		double valorHora = 0;
+		int quantidadeHoras = 0;
+		double salario = 0;
 		
 		
-		System.out.println("Quanto o trabalhador recebe por hora: " + salárioHora);
-		System.out.println("Quantas horas trabalhadas por mês: " + horasTrabalhadas);
-		System.out.println("Qual o salário mensal do trabalhador: " + "R$" + (salárioHora * horasTrabalhadas));
+		System.out.print("Entre com o valor da hora trabalhada: ");
+		valorHora = leia.nextDouble();
 		
+		System.out.print("Entre com a quantidade de horas trabalhadas: ");
+		quantidadeHoras = leia.nextInt();
+		
+		System.out.print("O valor do salario é: ");
+		salario = leia.nextDouble();
+		
+		salario = valorHora * quantidadeHoras;
+		
+		System.out.println("O valor do salario é: " + salario);
+		
+	
 		leia.close();
 
 	}
