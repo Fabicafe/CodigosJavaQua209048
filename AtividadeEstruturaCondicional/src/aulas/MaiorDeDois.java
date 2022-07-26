@@ -18,13 +18,12 @@ public class MaiorDeDois {
 		System.out.print("Entre com o valorB: ");
 		valorB = sc.nextInt();
 		
-		System.out.print("O maior valor é: ");
-		
+				
 		if(valorA > valorB){
-			System.out.println(valorA);
+			System.out.printf("Numero %d é o maior", valorA);
 			}
 		else{
-			System.out.println(valorB);
+			System.out.printf("Numero %d é o maior", valorB);
 			}
          
 		

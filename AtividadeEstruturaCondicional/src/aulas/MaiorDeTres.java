@@ -22,15 +22,15 @@ public class MaiorDeTres {
 		System.out.print("Entre com o valorC: ");
 		valorC = sc.nextInt();
 		
-		System.out.print("O maior valor é: ");
-		
+				
 		if(valorA > valorB && valorA > valorC){
-			System.out.println(valorA);
+			System.out.println("O maior numero é: " + valorA);
 			}
-		else{
-			System.out.println(valorB);
-			
-			System.out.println(valorC);
+		else if(valorB > valorC){
+			System.out.println("O maior numero é: " + valorB);
+		}
+		else {			
+			System.out.println("O maior numero é: " + valorC);
 			}
 		
 		sc.close();
