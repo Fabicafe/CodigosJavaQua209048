@@ -9,31 +9,30 @@ public class SenhaValida {
 
 		Scanner sc = new Scanner(System.in).useLocale(Locale.US);
 
-
-		int senha = 0;
+		String usuario;
+		String senha;
 		
+		System.out.print("Entrre com o nome do usuario: ");
+		usuario = sc.nextLine();
 		
-		{
-		int senhavalida = 12345;
-
-		   System.out.printf("Digite sua senha: ");
-		   System.out.printf("%d", senha);
-
-		    while(senha != senhavalida){
-		      System.out.printf(("Senha invalida!\n\nDigite sua senha: "));
-		      System.out.printf(("%d" + senha));
-		    
-
-		      System.out.printf("Acesso permitido!\n");
-				
+		System.out.print("Entrre com a senha: ");
+		senha = sc.nextLine();
 		
-		
-			}
+		while(usuario.equals(senha)) {
+			System.out.println("Usuario invalido! ");
+			
+			System.out.print("Entrre com o nome do usuario: ");
+			usuario = sc.nextLine();
+			
+			System.out.print("Entre com a senha: ");
+			senha = sc.nextLine();
+					
 		}
-		sc.close();
-
-	private static void senha ()
-		// TODO Auto-generated method stub
 		
-		}
-	}
+		System.out.println("Cadastro realizado com sucesso");
+			
+	
+	sc.close();
+
+}
+}

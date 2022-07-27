@@ -9,126 +9,66 @@ public class ValidarInformacoes {
 
 		Scanner sc = new Scanner(System.in).useLocale(Locale.US);
 
+		String nome;
+		int idade = 0;
+		double salario = 0.0;
+		char sexo;
+		char estadoCivil;
 
+		System.out.print("Entre com o nome: ");
+		nome = sc.nextLine();
 
-	       int nome = 0;
-	       int idade = 0;
-	       float salario = 0;
-	       char sexo = 0; 
-		   char estadoCivil = 0;
+		while (nome.length() < 3) {
+			System.out.println("Nome não pode conter menos que 3 caracteres!");
 
-	       
+			System.out.print("Entre com o nome: ");
+			nome = sc.nextLine();
+		}
 
-	         while(true){
+		System.out.print("Entre com a idade: ");
+		idade = sc.nextInt();
 
-	           System.out.print("Informe seu nome: ");
+		while (idade < 0 || idade > 150) {
+			System.out.println("Idade invalida entre com a idade novamente!");
 
-	           nome = sc.nextInt();
+			System.out.print("Entre com a idade: ");
+			idade = sc.nextInt();
+		}
 
-	           if (nome = sc.nextInt() > 3){
+		System.out.print("Entre com o salario: ");
+		salario = sc.nextDouble();
 
-	               break;
+		while (salario <= 0) {
+			System.out.println("Salario invalido, não pode ser menor que 0.");
 
-	           }else{
+			System.out.print("Entre com o salario: ");
+			salario = sc.nextDouble();
 
-	               System.out.println("O nome precisa ser maior de 3 caracteres!");
+		}
 
-	           }
+		System.out.print("Entre com o sexo: ");
+		sexo = sc.next().charAt(0);
 
-	       }
+		while (Character.toUpperCase(sexo) != 'M' && Character.toUpperCase(sexo) != 'F') {
+			System.out.println("Entre com o sexo valido!");
 
-	       
+			System.out.print("Entre com o sexo: ");
+			sexo = sc.next().charAt(0);
+		}
 
-	          while(true){
+		System.out.print("Entre com o estado civil: ");
+		estadoCivil = sc.next().charAt(0);
 
-	           System.out.print("Informe sua idade: ");
+		while (Character.toUpperCase(estadoCivil) != 'S' && Character.toUpperCase(estadoCivil) != 'C'
+				&& Character.toUpperCase(estadoCivil) != 'V' && Character.toUpperCase(estadoCivil) != 'D') {
 
-	           idade = sc.nextInt();
+			System.out.println("Estado civil invalido!");
 
-	           if (idade > 0 && idade <= 150){
+			System.out.print("Entre com o estado civil: ");
+			estadoCivil = sc.next().charAt(0);
+		}
 
-	               break;
+		sc.close();
 
-	           }else{
-
-	               System.out.println("A idade precisa estar entre 0 e 150 anos!");
-
-	           }
-
-	       }
-
-	           while(true){
-
-	           System.out.print("Informe seu salário: ");
-
-	           salario = sc.nextFloat();
-
-	           if (salario > 0){
-
-	               break;
-
-	           }else{
-
-	               System.out.println("O salário precisa ser maior que 0!");
-
-	           }
-
-	       }
-
-	      
-	    
-	       while(true){
-
-	           System.out.print("Informe seu sexo[M/F]: ");
-
-	           sexo = sc.next().charAt(0);
-
-	           sexo = (Character.toString(sexo).toUpperCase()).charAt(0);
-
-	           if (sexo == 'M' || sexo == 'F'){
-
-	               break;
-
-	           }else{
-
-	               System.out.println("O nome precisa ser 'M' ou 'F'!");
-
-	           }
-
-	       }
-
-	       
-
-	         while(true){
-
-	           System.out.print("Informe seu estado civil[c/s/v/d]: ");
-
-	           estadoCivil = sc.next().charAt(0);
-
-	           estadoCivil = (Character.toString(estadoCivil).toLowerCase()).charAt(0);
-
-	           if (estadoCivil == 'c' || estadoCivil == 's' || estadoCivil == 'v' || estadoCivil == 'd'){
-
-	               break;
-
-	           }else{
-
-	               System.out.println("O estado civil inválido!");
-		
-		
-			
-	           }
-	           
-	         }
-		
-
-	       		sc.close();
-
-	       		
-	       		
-	       		
-	       		
-	       		
-	       	}
-
-	       }
+	}
+}
