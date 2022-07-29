@@ -8,55 +8,83 @@ public class AtividadeAulaAssincronaDia27072022 {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in).useLocale(Locale.US);
-		
-		
-		int lulaMolusco = 0;
-		int bolsoNelson = 0;
-		int ciloucaGomes = 0;
-		int boloBolinho = 0;
-		int voto;
-	
-		
-		
-				
-		System.out.print("Entre com 1 para o cadidato lulaMolusco, "
-				+ "2 para o candidato bolsoNelson, "
-				+ "3 para o candidatos ciloucaGomes, "
-				+ "4 para o candidatos boloBolinho: ");
-		
-	
-		if (lulaMolusco == 1) {
-			voto = lulaMolusco + 1;
-			System.out.println();
-			
+
+		int molusco = 0;
+		int nelson = 0;
+		int gomes = 0;
+		int bolim = 0;
+		int num = 0;
+		char opcao;
+
+		System.out.println("Numeros dos candidatos:");
+		System.out.println("Molusco : 31");
+		System.out.println("Nelson: 10");
+		System.out.println("Gomes: 51");
+		System.out.println("Bolim: 20");
+
+		/*
+		 * do { System.out.
+		 * print("Qual candidato tem sua intenção de voto? entre com o numero: "); num =
+		 * sc.nextInt(); switch (num) { case 31:
+		 * System.out.println("Sua intenção de voto foi registrada!"); molusco++; break;
+		 * case 10: System.out.println("Sua intenção de voto foi registrada!");
+		 * nelson++; break; case 51:
+		 * System.out.println("Sua intenção de voto foi registrada!"); gomes++; break;
+		 * case 20: System.out.println("Sua intenção de voto foi registrada!"); bolim++;
+		 * break;
+		 * 
+		 * default: System.out.println("Numero invalido, ou candidato não disponivel!");
+		 * break; }
+		 * 
+		 * System.out.println("Deseja cadastrar outro voto?"); opcao =
+		 * sc.next().charAt(0); } while (Character.toLowerCase(opcao) == 's');
+		 * 
+		 * System.out.println("O candidato molusco tem " + molusco + " votos");
+		 * System.out.println("O candidato nelson tem " + nelson + " votos");
+		 * System.out.println("O candidato gomes tem " + gomes + " votos");
+		 * System.out.println("O candidato bolim tem " + bolim + " votos");
+		 */
+
+		System.out.print("Quantos votos deseja registrar: ");
+		int qtdVoto = sc.nextInt();
+
+		for (int i = 0; i < qtdVoto; i++) {
+			System.out.print("Qual candidato tem sua intenção de voto? entre com o numero: ");
+			num = sc.nextInt();
+
+			switch (num) {
+			case 31:
+				System.out.println("Sua intenção de voto foi registrada!");
+				molusco++;
+				break;
+
+			case 10:
+				System.out.println("Sua intenção de voto foi registrada!");
+				nelson++;
+				break;
+
+			case 51:
+				System.out.println("Sua intenção de voto foi registrada!");
+				gomes++;
+				break;
+
+			case 20:
+				System.out.println("Sua intenção de voto foi registrada!");
+				bolim++;
+				break;
+
+			default:
+				System.out.println("Numero invalido, ou candidato não disponivel!");
+
+				break;
+			}
+
 		}
-		if (bolsoNelson == 2); { 
-			voto = bolsoNelson + 1;
-			System.out.println();
-							
-			if (ciloucaGomes == 3); 
-			voto = ciloucaGomes + 1;
-			System.out.println();
-					
-			if (boloBolinho == 4);
-			voto = boloBolinho + 1;
-			System.out.println();
-			
-		}
-		
-			
-		System.out.println("O candidato LulaMolusco teve: " + "votos");
-		lulaMolusco=sc.nextInt();
-	
-		System.out.println("O candidato bolsoNelson teve: " + "votos");
-		bolsoNelson=sc.nextInt();
-	
-		System.out.println("O candidato ciloucaGomes teve: " + "votos");
-		ciloucaGomes=sc.nextInt();
-	
-		System.out.println("O candidato boloBolinho teve: " + "votos");
-		boloBolinho=sc.nextInt();
-	
+
+		System.out.println("O candidato molusco tem " + molusco + " votos");
+		System.out.println("O candidato nelson tem " + nelson + " votos");
+		System.out.println("O candidato gomes tem " + gomes + " votos");
+		System.out.println("O candidato bolim tem " + bolim + " votos");
 
 		sc.close();
 
