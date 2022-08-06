@@ -19,66 +19,40 @@ public class Herois {
 
 	public void setIdentidadeSecreta(String identidadeSecreta) {
 		this.identidadeSecreta = identidadeSecreta;
+
 	}
 
-	public void setUniversoPertence(String universoPertence) {
-		this.universoPertence = universoPertence;
+	public String getUniversoPertence(String universoPertence) {
+		return universoPertence;
 	}
 
-	public int getNomeDoHeroi() {
+	public int getNomeDoHeroi(int nomeHeroi) {
 		return nomeDoHeroi;
 	}
 
-	public void setNomeDoHeroi(int nomeDoHeroi) {
-		this.nomeDoHeroi = nomeDoHeroi;
-	}
-
-	public int getPlanetaNatal() {
+	
+	public int getPlanetaNatal(int planetaNatal) {
 		return planetaNatal;
 	}
 
-	public void setPlanetaNatal(int planetaNatal) {
-		this.planetaNatal = planetaNatal;
-	}
-
-	public int getLiga() {
+	public int getLiga(int liga) {
 		return liga;
 	}
 
-	public void setLiga(int liga) {
-		this.liga = liga;
-	}
-
-	public int getBaseSecreta() {
+	public int getBaseSecreta(int baseSecreta) {
 		return baseSecreta;
 	}
 
-	public void setBaseSecreta(int baseSecreta) {
-		this.baseSecreta = baseSecreta;
-	}
-
-	public int getSuperPoderes() {
+	public int getSuperPoderes(int superPoderes) {
 		return superPoderes;
 	}
 
-	public void setSuperPoderes(int superPoderes) {
-		this.superPoderes = superPoderes;
-	}
-
-	public double getIdade() {
+	public double getIdade(double idade) {
 		return idade;
 	}
 
-	public void setIdade(double idade) {
-		this.idade = idade;
-	}
-
-	public char getEstaNaAtiva() {
+	public char getEstaNaAtiva(char estaNaAtiva) {
 		return estaNaAtiva;
-	}
-
-	public void setEstaNaAtiva(char estaNaAtiva) {
-		this.estaNaAtiva = estaNaAtiva;
 	}
 
 }
