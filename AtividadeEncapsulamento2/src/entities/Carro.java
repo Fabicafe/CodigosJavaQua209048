@@ -7,29 +7,23 @@ public class Carro {
 	private String cor;
 	private String tipo;
 	private char cambio;
-	private String combustivel;
-	private int valor;
-	private String km;
+	private char tipoCombustivel;
+	private double valor;
+	private String estadoConservacao;
+	private Cliente cliente;
 	
-	public Carro () {
-		
-	}
-	public Carro(int ano, String modelo, String cor, String tipo, char cambio, String combustivel, int valor, String km) {
-		this.ano = ano;
-		this.modelo = modelo;
-		this.cor = cor;
-		this.tipo = tipo;
-		this.combustivel = combustivel;
-		this.valor = valor;
-		this.km = km;
-	}
-		
-			
+	
 	public int getAno() {
 		return ano;
 	}
-	public void setAno(int i) {
-		this.ano = i;
+	public void setAno(int ano) throws Exception{
+		if(ano >= 2019) {
+			this.ano = ano;
+		}else {
+			
+			throw new Exception("Não pode ser efetuado cadastro, carro com ano incompativel, so aceitamos carro com menos de 3 anos de uso");
+		}
+		
 	}
 	public String getModelo() {
 		return modelo;
@@ -55,24 +49,49 @@ public class Carro {
 	public void setCambio(char cambio) {
 		this.cambio = cambio;
 	}
-	public String getCombustivel() {
-		return combustivel;
+	public char getTipoCombustivel() {
+		return tipoCombustivel;
 	}
-	public void setCombustivel(String combustivel) {
-		this.combustivel = combustivel;
+	public void setTipoCombustivel(char tipoCombustivel) {
+		this.tipoCombustivel = tipoCombustivel;
 	}
-	public int getValor() {
+	public double getValor() {
 		return valor;
 	}
-	public void setValor(int valor) {
-		this.valor = valor;
+	
+	public String getEstadoConservacao() {
+		return estadoConservacao;
 	}
-	public String getKm() {
-		return km;
-	}
-	public void setKm(String km) {
-		this.km = km;
+	public void setEstadoConservacao(String estadoConservacao) {
+		this.estadoConservacao = estadoConservacao;
 	}
 	
+	public void ValorCompra(double valor) {
+		this.valor += (valor + (valor * 0.40)); 
+	}
+	
+	public Cliente getCliente() {
+		return cliente;
+	}
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+	
+	@Override
+	public String toString() {
+		return "Cliente: " + cliente.getNome()
+		+"\nCPF: " + cliente.getCpf()
+		+"\nTelefone: " + cliente.getTelefone()
+		+"\nEndereço: " + cliente.getEndereco()
+		+"\n\n"
+		+"\nVeiculo: " + modelo
+		+"\ncambio: " + cambio
+		+"\nAno: " + ano
+		+"\nCor: " + cor
+		+"\ntipo: " + tipo
+		+"\nCombustivel: " + tipoCombustivel
+		+"\nVeiculo novo ou usado: " + estadoConservacao
+		+"\nValor venda: " + valor;
+	}
 
 }
