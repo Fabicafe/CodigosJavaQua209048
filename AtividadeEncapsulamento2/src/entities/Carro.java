@@ -28,8 +28,8 @@ public class Carro {
 	public int getAno() {
 		return ano;
 	}
-	public void setAno(int ano) {
-		this.ano = ano;
+	public void setAno(int i) {
+		this.ano = i;
 	}
 	public String getModelo() {
 		return modelo;

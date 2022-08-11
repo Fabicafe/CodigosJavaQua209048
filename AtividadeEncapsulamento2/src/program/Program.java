@@ -7,11 +7,6 @@ import entities.Carro;
 import entities.Cliente;
 
 
-
-
-
-
-
 public class Program {
 
 	public static void main(String[] args) {
@@ -36,28 +31,31 @@ public class Program {
 		
 		System.out.println(carro);
 		
-		System.out.print();
+		System.out.print("\nEntre com o ano do carro: ");
+		carro.setAno(sc.nextInt());
 		
+		System.out.print("\nEntre com o modelo: ");
+		carro.setModelo(sc.nextLine());
 		
+		System.out.print("\nEntre com acor do carro: ");
+		carro.setCor(sc.nextLine());
 		
+				System.out.print("\nEntre com o tipo de carro: ");
+		carro.setTipo(sc.nextLine());
 		
+		System.out.print("\nEntre com o cambio: ");
+		carro.setCambio((char) sc.nextFloat());
 		
+		System.out.print("\nEntre com o tipo de combustivel: ");
+		carro.setCombustivel(sc.nextLine());
 		
+		System.out.print("\nEntre com o valor do carro: ");
+		carro.setValor(sc.nextInt());
 		
+		System.out.print("\nEntre com o km do carro: ");
+		carro.setKm(sc.nextLine());
 	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+			
 		sc.close();
 
 	}
