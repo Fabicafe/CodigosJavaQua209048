@@ -2,13 +2,10 @@ package program;
 
 import java.util.Locale;
 import java.util.Scanner;
-import java.util.stream.IntStream;
+
 
 import program.Herois;
-import program.Viloes;
 
-
-@SuppressWarnings("unused")
 
 public class Program {
 
@@ -76,8 +73,8 @@ public class Program {
 		viloes.getBaseSecreta(baseSecreta);
 		
 		System.out.print("Entre com os super poderes: ");
-		int superPoderes = sc.nextInt();
-		viloes .getSuperPoderes(superPoderes);
+		int superPoderes1 = sc.nextInt();
+		viloes .getSuperPoderes(superPoderes1);
 		
 		System.out.print("Entre com a idade: ");
 		double idade = sc.nextDouble();

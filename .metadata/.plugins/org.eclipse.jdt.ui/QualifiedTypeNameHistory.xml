@@ -5,4 +5,5 @@
     <fullyQualifiedTypeName name="entity.Pessoa"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="program.Herois"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
 </qualifiedTypeNameHistroy>
